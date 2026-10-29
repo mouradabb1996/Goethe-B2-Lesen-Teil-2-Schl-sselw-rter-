@@ -1,0 +1,252 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#198754"><meta name="description" content="Interaktives Training für Goethe B2 Lesen Teil 2."><title>Teil 2 lesen Goethe B2</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
+:root{--green:#198754;--green-dark:#146c43;--green-soft:#e8f5ee;--bg:#f7f9f8;--ink:#212529;--muted:#66716b;--line:#e1e8e4;--red:#b42318;--red-bg:#fff0ef;--yellow:#8a6500;--yellow-bg:#fff7d6;--shadow:0 5px 18px #193b2b0b}
+[data-theme="dark"]{--green:#42b883;--green-dark:#7bd6a8;--green-soft:#173c2b;--bg:#111714;--ink:#edf4ef;--muted:#a5b4ab;--line:#2c3931;--red:#ff8c84;--red-bg:#3a211f;--yellow:#f1d36a;--yellow-bg:#3a3218;--shadow:0 5px 18px #00000025}
+[data-theme="dark"] .topbar,[data-theme="dark"] .topic-card,[data-theme="dark"] .person-card,[data-theme="dark"] .question,[data-theme="dark"] .results-card,[data-theme="dark"] .history-item,[data-theme="dark"] .empty{background:#19211c;border-color:var(--line);color:var(--ink)}
+[data-theme="dark"] .topic-card p,[data-theme="dark"] .description,[data-theme="dark"] .subtle,[data-theme="dark"] .footer{color:var(--muted)}
+[data-theme="dark"] .question select,[data-theme="dark"] .option-item select{background:#111714;color:#edf4ef;border-color:#456b55;color-scheme:dark}
+[data-theme="dark"] .option-item{background:#19211c;border-color:var(--line);color:var(--ink)}
+[data-theme="dark"] .option-text{color:#edf4ef}
+[data-theme="dark"] .option-item select option{background:#19211c;color:#edf4ef}
+[data-theme="dark"] .qnum{background:#26332b;color:#dce9e0}
+[data-theme="dark"] .btn-secondary{background:#19211c;color:#9fe3bc;border-color:#456b55}
+[data-theme="dark"] .btn-quiet{color:var(--muted);border-color:var(--line)}
+[data-theme="dark"] .notice{background:#3a3218;color:#f1d36a}
+[data-theme="dark"] .question.correct{background:#173c2b;border-color:#327a54}
+[data-theme="dark"] .question.wrong{background:#3a211f;border-color:#87423d}
+[data-theme="dark"] .question.review{background:#3a3218;border-color:#806d2a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}button,select{font:inherit}button{cursor:pointer}.topbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.nav{max-width:1160px;margin:auto;padding:14px 20px;display:flex;align-items:center;gap:11px;font-weight:800}.brand-icon{display:grid;place-items:center;background:var(--green-soft);color:var(--green);width:38px;height:38px;border-radius:12px;font-size:21px}.brand{letter-spacing:-.35px}.theme-toggle{padding:8px 11px;min-height:38px;font-size:12px;white-space:nowrap}.nav-right{margin-left:auto;font-size:12px;color:var(--muted);font-weight:600}.wrap{max-width:1160px;margin:auto;padding:34px 20px 60px}.hero{padding:20px 0 26px}.eyebrow{color:var(--green);font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}.hero h1{font-size:clamp(28px,4vw,43px);letter-spacing:-1.3px;line-height:1.13;margin:9px 0 13px}.hero p{color:var(--muted);max-width:700px;margin:0;font-size:16px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:20px 0 16px}.section-head h2{margin:0;font-size:22px;letter-spacing:-.5px}.subtle{font-size:13px;color:var(--muted)}.topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.topic-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:21px;text-align:left;box-shadow:var(--shadow);transition:transform .16s,border-color .16s,box-shadow .16s;min-height:168px;color:inherit}.topic-card:hover{transform:translateY(-3px);border-color:#9acbb0;box-shadow:0 10px 26px #193b2b12}.topic-top{display:flex;align-items:center;justify-content:space-between}.topic-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:var(--green-soft);font-size:22px}.topic-number{font-size:12px;color:var(--muted);font-weight:700}.topic-card h3{font-size:18px;margin:17px 0 5px}.topic-card p{margin:0;color:var(--muted);font-size:13px}.btn{border-radius:11px;border:1px solid transparent;padding:11px 16px;font-weight:700;min-height:44px;transition:background .15s,transform .15s}.btn:active{transform:scale(.98)}.btn-primary{background:var(--green);color:#fff}.btn-primary:hover{background:var(--green-dark)}.btn-secondary{background:#fff;color:var(--green-dark);border-color:#9bc9ae}.btn-secondary:hover{background:var(--green-soft)}.btn-quiet{background:transparent;color:var(--muted);border-color:var(--line)}.button-row{display:flex;gap:10px;flex-wrap:wrap}.hidden{display:none!important}.backlink{border:0;background:none;padding:0;color:var(--green-dark);font-weight:700;margin-bottom:18px}.test-title-row{display:flex;align-items:start;justify-content:space-between;gap:16px;flex-wrap:wrap}.test-title-row h1{font-size:clamp(25px,3vw,34px);margin:0 0 5px;letter-spacing:-.8px}.progress-wrap{margin:22px 0 25px}.progress-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-bottom:8px}.progress{height:8px;background:#e5ece8;border-radius:20px;overflow:hidden}.progress-bar{height:100%;background:var(--green);width:0;transition:width .2s}.section-label{font-size:15px;font-weight:800;margin:25px 0 12px}.people-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.person-card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:16px;min-width:0}.letter{display:inline-grid;place-items:center;width:33px;height:33px;border-radius:10px;background:var(--green-soft);color:var(--green-dark);font-size:16px;font-weight:800;margin-bottom:9px}.keywords{font-size:14px;font-weight:700;margin-bottom:8px}.description{font-size:12px;color:var(--muted);margin:0}.questions{display:grid;gap:10px}.question{display:grid;grid-template-columns:44px minmax(0,1fr) 150px;align-items:center;gap:13px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 15px;transition:border-color .15s,background .15s}.qnum{width:34px;height:34px;display:grid;place-items:center;background:#f0f4f2;border-radius:10px;font-weight:800;color:#48534d}.qtext{font-size:14px;font-weight:600;overflow-wrap:anywhere}.question select{width:100%;border:1px solid #a7cdb5;background:#fff;border-radius:10px;padding:10px 12px;min-height:44px;color:var(--ink);outline:none}.question select:focus{border-color:var(--green);box-shadow:0 0 0 3px #1987541b}.question.correct{background:var(--green-soft);border-color:#9bd1b1}.question.wrong{background:var(--red-bg);border-color:#f0aaa5}.question.review{background:var(--yellow-bg);border-color:#ead68b}.feedback{grid-column:2/-1;font-size:12px;font-weight:700;margin-top:-3px}.correct .feedback{color:var(--green-dark)}.wrong .feedback{color:var(--red)}.review .feedback{color:var(--yellow)}.results-card{display:grid;grid-template-columns:1.25fr repeat(3,1fr);gap:10px;background:#fff;border:1px solid var(--line);border-radius:17px;padding:18px;margin:18px 0 20px;box-shadow:var(--shadow)}.score-main{padding:4px 10px}.score-main strong{display:block;font-size:30px;letter-spacing:-1px;color:var(--green)}.score-main span,.stat span{font-size:12px;color:var(--muted)}.stat{border-left:1px solid var(--line);padding:8px 14px}.stat strong{display:block;font-size:23px}.stat.good strong{color:var(--green)}.stat.bad strong{color:var(--red)}.stat.reviewstat strong{color:var(--yellow)}.notice{border-radius:12px;background:#fff7d6;color:#705300;padding:12px 14px;font-size:13px;margin:14px 0}.history{margin-top:36px}.history-list{display:grid;gap:8px}.history-item{display:flex;justify-content:space-between;gap:12px;background:#fff;border:1px solid var(--line);border-radius:11px;padding:12px 14px;font-size:13px}.empty{font-size:13px;color:var(--muted);padding:15px;background:#fff;border:1px dashed var(--line);border-radius:12px}.creator-credit{margin-top:12px;text-align:center;font-size:12px;color:var(--muted);letter-spacing:.15px}.creator-credit a{color:var(--green);font-weight:800;text-decoration:none}.creator-credit a:hover{text-decoration:underline}.footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:12px;margin-top:38px}
+@media(max-width:850px){.topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.results-card{grid-template-columns:repeat(3,1fr)}.score-main{grid-column:1/-1;border-bottom:1px solid var(--line);padding-bottom:12px}.stat{border-left:0;padding:5px 8px}}
+@media(max-width:560px){.wrap{padding:23px 14px 40px}.nav{padding:11px 14px}.nav-right{display:none}.theme-toggle{margin-left:auto;padding:7px 9px}.theme-toggle span{display:none}.topic-grid{grid-template-columns:1fr;gap:11px}.topic-card{min-height:0;padding:17px}.topic-card h3{margin-top:12px}.people-grid{grid-template-columns:1fr 1fr;gap:9px}.person-card{padding:12px}.keywords{font-size:13px}.description{font-size:11px}.question{grid-template-columns:35px minmax(0,1fr);gap:9px;padding:12px}.question select{grid-column:2;max-width:190px}.feedback{grid-column:2}.qtext{font-size:13px}.results-card{padding:13px;gap:4px}.stat{padding:5px 3px}.stat strong{font-size:20px}.stat span{font-size:11px}.button-row .btn{flex:1}.test-title-row .subtle{width:100%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+
+
+.matching-board{display:grid;grid-template-columns:1fr;gap:18px}
+.answer-slots{scroll-margin-top:88px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.answer-slot{display:flex;align-items:center;gap:12px;min-height:72px;padding:12px;border:2px dashed var(--line);border-radius:14px;background:var(--bg);cursor:pointer;transition:.15s}
+.answer-slot.drag-over,.answer-slot.selected-target{border-color:var(--green);background:var(--green-soft)}
+.slot-number{display:grid;place-items:center;flex:0 0 42px;height:42px;border-radius:11px;background:var(--green-soft);color:var(--green);font-weight:900}
+.slot-content{min-width:0;flex:1;font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+.slot-content.filled{color:var(--ink);font-weight:700}
+.option-bank-title{font-weight:800;margin:2px 0 10px}
+.option-bank{scroll-margin-top:88px;display:grid;grid-template-columns:1fr;gap:10px}
+.option-item{
+  display:grid;
+  grid-template-columns:46px minmax(0,1fr) 40px;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  min-height:62px;
+  padding:12px;
+  background:var(--surface,#fff);
+  border:1px solid var(--line);
+  border-radius:13px;
+  cursor:default;
+  user-select:text;
+  touch-action:pan-y;
+}
+.option-text{
+  grid-column:2;
+  min-width:0;
+  width:100%;
+  max-width:100%;
+  font-size:14px;
+  font-weight:600;
+  line-height:1.5;
+  white-space:normal;
+  overflow-wrap:break-word;
+  word-break:normal;
+  writing-mode:horizontal-tb;
+}
+.order-number{
+  grid-column:1;
+  min-width:0;
+  width:46px;
+  text-align:center;
+  justify-self:start;
+  flex:none;
+}
+.move-controls{
+  grid-column:3;
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  justify-content:center;
+  gap:5px;
+  min-width:0;
+  width:40px;
+  margin:0;
+}
+.move-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  min-width:40px;
+  height:34px;
+  padding:0;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:var(--bg);
+  color:var(--ink);
+  font-size:20px;
+  line-height:1;
+  font-weight:700;
+  cursor:pointer;
+  touch-action:pan-y;
+  flex:0 0 auto;
+}
+.move-btn:disabled{opacity:.3;cursor:default}
+.option-item:active{cursor:default}
+.option-item.selected{border:2px solid var(--green);background:var(--green-soft)}
+.option-item.assigned{opacity:.55}
+.option-item.correct{background:var(--green-soft);border-color:#9bd1b1}
+.option-item.wrong{background:var(--red-bg);border-color:#f0aaa5}
+.option-feedback{
+  grid-column:1/-1;
+  min-width:0;
+  width:100%;
+  font-size:12px;
+  font-weight:700;
+  line-height:1.45;
+  white-space:normal;
+  overflow-wrap:break-word;
+  word-break:normal;
+}
+.option-item.correct .option-feedback{color:var(--green-dark)}
+.option-item.wrong .option-feedback{color:var(--red)}
+[data-theme="dark"] .option-item{background:#19211c;border-color:var(--line);color:var(--ink)}
+[data-theme="dark"] .option-text{color:#edf4ef}
+[data-theme="dark"] .option-item.correct{background:#173c2b;border-color:#327a54}
+[data-theme="dark"] .option-item.wrong{background:#3a211f;border-color:#87423d}
+[data-theme="dark"] .option-item.selected{background:#173c2b;border-color:#42b883}
+[data-theme="dark"] .answer-slot{background:#111714}
+[data-theme="dark"] .answer-slot.drag-over,[data-theme="dark"] .answer-slot.selected-target{background:#173c2b}
+[data-theme="dark"] .slot-number{background:#26332b;color:#9fe3bc}
+@media(max-width:560px){
+  .answer-slots,.option-bank{grid-template-columns:1fr}
+  .answer-slot{min-height:66px}
+  .option-item{
+    grid-template-columns:40px minmax(0,1fr) 38px;
+    gap:8px;
+    min-height:58px;
+    padding:10px;
+  }
+  .order-number{width:40px}
+  .move-controls{width:38px}
+  .move-btn{width:38px;min-width:38px;height:34px}
+  .option-text{font-size:14px;min-width:0}
+}
+</style></head><body>
+<header class="topbar"><div class="nav"><div class="brand-icon" aria-hidden="true">▤</div><div class="brand">Teil 2 lesen Goethe B2</div><button class="btn btn-secondary theme-toggle" id="themeToggle" type="button" aria-label="Dark Mode aktivieren" title="Dark Mode">☾ <span id="themeLabel">Dark Mode</span></button><div class="nav-right">LERNEN · ÜBEN · VERBESSERN</div></div></header>
+<main class="wrap">
+<section id="home">
+<div class="hero"><div class="eyebrow">Deutschprüfung · Niveau B2</div><h1>Goethe B2 – Lesen Teil 2</h1><p>Ordne die Textbausteine den Nummern 10 bis 15 zu. Pro Thema gibt es acht Möglichkeiten; sechs davon gehören zu den nummerierten Lösungen.</p></div>
+<div class="section-head"><h2>Wähle ein Thema</h2><span class="subtle">6 Übungsthemen · ohne Anmeldung</span></div>
+<div id="topicGrid" class="topic-grid"></div>
+<section class="history"><div class="section-head"><h2>Dein Lernverlauf</h2><button class="btn btn-quiet" id="clearHistory">Verlauf löschen</button></div><div id="historyList" class="history-list"></div></section>
+</section>
+<section id="test" class="hidden">
+<button class="backlink" id="backHome">← Zurück zu den Themen</button>
+<div class="test-title-row"><div><div class="eyebrow" id="topicEyebrow">THEMA 1</div><h1 id="testTitle"></h1><div class="subtle">Ordne jeder passenden Möglichkeit eine Nummer von 10 bis 15 zu. Falsche Möglichkeiten bleiben ohne Zuordnung.</div></div><div class="subtle" id="questionCount">8 Möglichkeiten</div></div>
+<div id="results" class="hidden"></div>
+<div class="notice">Ordne die acht Möglichkeiten mit den Pfeilen ↑ und ↓. Die ersten sechs Plätze sind 10–15, die letzten zwei sind 00.</div>
+<div id="questions" class="questions"></div>
+<div class="button-row" style="margin-top:22px"><button class="btn btn-primary" id="correctBtn">Korrigieren</button><button class="btn btn-secondary" id="newTestBtn">Neuer Test</button><button class="btn btn-quiet" id="retryBtn" style="display:none">Noch einmal versuchen</button></div>
+</section>
+<footer class="footer">Lernhilfe für Goethe B2 Lesen Teil 2. Die deutschen Formulierungen aus dem bereitgestellten PDF wurden ohne arabische Übersetzungen übernommen.<div class="creator-credit">Designed and developed by <a href="https://www.instagram.com/mourad.abb/" target="_blank" rel="noopener noreferrer">@Mourad.abb</a></div></footer>
+</main>
+<script>
+const topics = [{"title": "Platform (Glück)", "icon": "☘", "options": [{"text": "selbst hergestellt (gemacht)", "key": "10"}, {"text": "verpassen", "key": "11"}, {"text": "Hektisch", "key": "12"}, {"text": "Hobby (Freizeit)", "key": "13"}, {"text": "Gesund Essen", "key": "14"}, {"text": "Land", "key": "15"}, {"text": "Luxusartikel kaufen", "key": "none"}, {"text": "den ganzen Tag zu Hause bleiben", "key": "none"}]}, {"title": "Messen Land Deutschland", "icon": "▦", "options": [{"text": "Als Mutter", "key": "10"}, {"text": "Blütezeit", "key": "11"}, {"text": "Endlich - leisten", "key": "12"}, {"text": "Besucher", "key": "13"}, {"text": "Deutsche Messen", "key": "14"}, {"text": "Faktor", "key": "15"}, {"text": "Eintrittskarten online verkaufen", "key": "none"}, {"text": "Messen im Ausland absagen", "key": "none"}]}, {"title": "Online Studieren (Digitalisierung)", "icon": "⌘", "options": [{"text": "Abitur", "key": "10"}, {"text": "Frage", "key": "11"}, {"text": "Gruppenarbeit", "key": "12"}, {"text": "Begeistert", "key": "13"}, {"text": "Ziel", "key": "14"}, {"text": "Außerdem", "key": "15"}, {"text": "Präsenzunterricht jeden Tag", "key": "none"}, {"text": "ohne Internetzugang lernen", "key": "none"}]}, {"title": "Menschen unterschiedlichen Alters arbeiten zusammen", "icon": "◉", "options": [{"text": "Ansicht", "key": "10"}, {"text": "Konflikt", "key": "11"}, {"text": "Perspektive", "key": "12"}, {"text": "Unproduktivität", "key": "13"}, {"text": "Einkommen", "key": "14"}, {"text": "Es muss alle handeln", "key": "15"}, {"text": "gleiche Hobbys in jeder Altersgruppe", "key": "none"}, {"text": "getrennte Arbeitsplätze für alle", "key": "none"}]}, {"title": "Teilen im Leben", "icon": "↗", "options": [{"text": "Schleißlich", "key": "10"}, {"text": "U-Bahn S-Bahn", "key": "11"}, {"text": "Fremde Menschen", "key": "12"}, {"text": "Warum", "key": "13"}, {"text": "geteilt", "key": "14"}, {"text": "meißt in kleinen", "key": "15"}, {"text": "alles ausschließlich allein besitzen", "key": "none"}, {"text": "nie öffentliche Verkehrsmittel nutzen", "key": "none"}]}, {"title": "Keine Chance", "icon": "◇", "options": [{"text": "Begabungen werden Behindert", "key": "10"}, {"text": "Andere Themen interessieren sie nicht (Nicht Anderes achten)", "key": "11"}, {"text": "Doch es störte ihn überhaupt nicht", "key": "12"}, {"text": "Der standardisierte Durchschnitt steht also im Vordergrund", "key": "13"}, {"text": "Einige Wissenschaftler teilen seine Ansichten", "key": "14"}, {"text": "Ein Grund .. Arbeitgeber sein", "key": "15"}, {"text": "alle Schüler bekommen dieselben Noten", "key": "none"}, {"text": "Noten spielen überhaupt keine Rolle", "key": "none"}]}];
+const $=id=>document.getElementById(id);
+let currentTopic=-1, currentOptions=[], answers={}, corrected=false;
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function renderHome(){
+ const root=$("topicGrid");root.innerHTML="";
+ topics.forEach((t,i)=>{const b=document.createElement("button");b.className="topic-card";b.innerHTML=`<div class="topic-top"><span class="topic-icon">${t.icon}</span><span class="topic-number">THEMA ${i+1}</span></div><h3>${esc(t.title)}</h3><p>8 Möglichkeiten · Nummern 10–15</p>`;b.addEventListener("click",()=>startTopic(i));root.appendChild(b)});
+ renderHistory();
+}
+function startTopic(i,force=false){
+ if(currentTopic===i && Object.keys(assignments).length>0 && !force && !corrected){if(!confirm("Deine Antworten gehen verloren. Möchtest du wirklich einen neuen Test starten?"))return}
+ currentTopic=i;corrected=false;answers={};assignments={};selectedOptionId=null;currentOptions=shuffle(topics[i].options.map((o,index)=>({...o,id:index})));
+ $("home").classList.add("hidden");$("test").classList.remove("hidden");$("results").classList.add("hidden");$("retryBtn").style.display="none";$("correctBtn").style.display="inline-block";
+ $("topicEyebrow").textContent=`THEMA ${i+1}`;$("testTitle").textContent=topics[i].title;$("questionCount").textContent="8 Möglichkeiten";
+ renderQuestions();window.scrollTo({top:0,behavior:"smooth"});
+}
+let selectedOptionId=null;
+function renderQuestions(){
+ const root=$("questions");root.innerHTML="";
+ const board=document.createElement("div");board.className="matching-board";
+ const title=document.createElement("div");title.className="option-bank-title";
+ title.textContent="Ordne die Möglichkeiten mit den Pfeilen ↑ und ↓. Die ersten sechs Plätze sind 10–15, die letzten zwei sind 00."
+ board.appendChild(title);
+ const bank=document.createElement("div");bank.className="option-bank";bank.id="optionBank";
+ const ordered=currentOptions;
+ ordered.forEach((o,index)=>{
+  const card=document.createElement("div");card.className="option-item sortable-option";card.id=`option-${o.id}`;
+  card.draggable=false;card.dataset.id=String(o.id);card.tabIndex=0;card.setAttribute("role","listitem");
+  const badge=document.createElement("span");badge.className="slot-number order-number";
+  badge.textContent=index<6?String(10+index):"00";
+  const tx=document.createElement("div");tx.className="option-text";tx.textContent=o.text;
+  card.append(badge,tx);
+  if(corrected){
+   const target=index<6?String(10+index):"none";
+   const ok=o.key===target;
+   card.classList.add(ok?"correct":"wrong");
+   const fb=document.createElement("div");fb.className="option-feedback";
+   fb.textContent=ok?(o.key==="none"?"✓ Richtig · 00":"✓ Richtig · Nummer "+o.key):(o.key==="none"?"✕ Falsch · diese Möglichkeit gehört nicht zu 00":"✕ Falsch · richtige Nummer: "+o.key);
+   card.appendChild(fb);
+  }
+  bank.appendChild(card);
+ });
+ // Simple mobile-friendly reordering: select an option, then tap ↑ or ↓.
+ if(!corrected){
+  bank.querySelectorAll(".sortable-option").forEach(card=>{
+   const controls=document.createElement("div");controls.className="move-controls";
+   const up=document.createElement("button");up.type="button";up.className="move-btn";up.textContent="↑";up.setAttribute("aria-label","Eine Position nach oben");
+   const down=document.createElement("button");down.type="button";down.className="move-btn";down.textContent="↓";down.setAttribute("aria-label","Eine Position nach unten");
+   const move=(delta)=>{
+    const cards=[...bank.querySelectorAll(".sortable-option")];const i=cards.indexOf(card);const j=i+delta;
+    if(j<0||j>=cards.length)return;
+    const other=cards[j];
+    if(delta<0)bank.insertBefore(card,other);else bank.insertBefore(other,card);
+    const ids=[...bank.querySelectorAll(".sortable-option")].map(el=>Number(el.dataset.id));
+    currentOptions.sort((a,b)=>ids.indexOf(a.id)-ids.indexOf(b.id));
+    renderQuestions();
+   };
+   up.disabled=card===bank.firstElementChild;
+   down.disabled=card===bank.lastElementChild;
+   up.addEventListener("click",()=>move(-1));down.addEventListener("click",()=>move(1));
+   controls.append(up,down);card.appendChild(controls);
+  });
+ }
+ board.appendChild(bank);root.appendChild(board);
+}
+let assignments={};
+function correctAnswers(){
+ if(corrected)return;corrected=true;
+ let right=0,wrong=0;
+ currentOptions.forEach((o,index)=>{
+  const expected=index<6?String(10+index):"none";
+  if(o.key===expected)right++;else wrong++;
+ });
+ wrong=8-right;
+ renderQuestions();
+ $("results").classList.remove("hidden");$("results").innerHTML=`<div class="results-card"><div class="score-main"><span>Dein Ergebnis</span><strong>${right} / 8</strong><span>richtige Antworten</span></div><div class="stat good"><strong>${right}</strong><span>Richtig</span></div><div class="stat bad"><strong>${wrong}</strong><span>Falsch</span></div><div class="stat reviewstat"><strong>${8-right}</strong><span>Noch üben</span></div></div>`;
+ $("correctBtn").style.display="none";$("retryBtn").style.display="inline-block";
+ saveHistory({topic:topics[currentTopic].title,score:right,total:8,when:new Date().toISOString()});
+ $("results").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function saveHistory(entry){try{const h=JSON.parse(localStorage.getItem("goetheB2Teil2History")||"[]");h.unshift(entry);localStorage.setItem("goetheB2Teil2History",JSON.stringify(h.slice(0,20)))}catch(e){}renderHistory()}
+function renderHistory(){const root=$("historyList");let h=[];try{h=JSON.parse(localStorage.getItem("goetheB2Teil2History")||"[]")}catch(e){}if(!h.length){root.innerHTML='<div class="empty">Noch keine Ergebnisse. Nach dem Korrigieren erscheinen deine letzten Versuche hier auf diesem Gerät.</div>';return}root.innerHTML=h.map(x=>`<div class="history-item"><div><strong>${esc(x.topic)}</strong><div class="subtle">${new Date(x.when).toLocaleString("de-DE")}</div></div><div><strong>${x.score}/${x.total}</strong></div></div>`).join("")}
+$("correctBtn").addEventListener("click",correctAnswers);
+$("newTestBtn").addEventListener("click",()=>startTopic(currentTopic,true));
+$("retryBtn").addEventListener("click",()=>startTopic(currentTopic,true));
+$("backHome").addEventListener("click",()=>{$("test").classList.add("hidden");$("home").classList.remove("hidden");renderHome();window.scrollTo({top:0,behavior:"smooth"})});
+$("clearHistory").addEventListener("click",()=>{if(confirm("Möchtest du den lokalen Lernverlauf wirklich löschen?")){try{localStorage.removeItem("goetheB2Teil2History")}catch(e){}renderHistory()}});
+function applyTheme(theme){document.documentElement.dataset.theme=theme;const dark=theme==="dark",btn=$("themeToggle");btn.innerHTML=dark?'☀ <span id="themeLabel">Light Mode</span>':'☾ <span id="themeLabel">Dark Mode</span>';btn.setAttribute("aria-label",dark?"Light Mode aktivieren":"Dark Mode aktivieren");btn.title=dark?"Light Mode":"Dark Mode";try{localStorage.setItem("goetheB2Teil2Theme",theme)}catch(e){}}
+(function(){let theme="light";try{theme=localStorage.getItem("goetheB2Teil2Theme")||"light"}catch(e){}applyTheme(theme)})();
+$("themeToggle").addEventListener("click",()=>applyTheme(document.documentElement.dataset.theme==="dark"?"light":"dark"));
+renderHome();
+</script></body></html>
